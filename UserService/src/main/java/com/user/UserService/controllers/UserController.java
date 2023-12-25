@@ -25,11 +25,6 @@ public class UserController {
     private UserService userService;
 
     private Logger logger = LoggerFactory.getLogger(UserController.class);
-    @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-        User user1 = userService.saveUser(user);
-        return ResponseEntity.status(HttpStatus.CREATED).body(user1);
-    }
     //    int retryCount = 1;
     @GetMapping("/{userId}")
     @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelFallback")
