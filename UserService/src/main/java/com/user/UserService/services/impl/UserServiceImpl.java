@@ -27,13 +27,6 @@ public class UserServiceImpl implements UserService {
     private RestTemplate restTemplate;
 
     private Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
-    @Override
-    public User saveUser(User user) {
-//for generating unique userId
-        String randomUserId = UUID.randomUUID().toString();
-        user.setUserId(randomUserId);
-        return userRepository.save(user);
-    }
 
     @Override
     public List<User> getAllUser() {
