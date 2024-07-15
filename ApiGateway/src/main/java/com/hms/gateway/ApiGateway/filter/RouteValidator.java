@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.function.Predicate;
-
+//endpoints jinko hum allow kr rhe without validation
 @Component
 public class RouteValidator {
     public static final List<String> Endpoints = List.of(

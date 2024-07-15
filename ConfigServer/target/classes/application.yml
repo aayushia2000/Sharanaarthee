@@ -1,0 +1,14 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: CONFIG-SERVER
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/aayushia2000/Sharanaarthee.git
+          clone-on-start: true
